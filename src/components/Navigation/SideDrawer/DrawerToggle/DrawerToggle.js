@@ -4,8 +4,8 @@ import classes from './DrawerToggle.css';
 
 const drawerToggle = (props) => (
     <div
-        onClick={props.clicked}
         className={classes.DrawerToggle}
+        onClick={props.clicked}
     >
         <div></div>
         <div></div>
