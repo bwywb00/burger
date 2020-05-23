@@ -32,9 +32,6 @@ const withErrorHandler = (WrapperComponent, axios) => {
         }
 
         render() {
-
-            console.log("I'm ErrorHandler");
-
             return (
                 <Aux>
                     {/* 
