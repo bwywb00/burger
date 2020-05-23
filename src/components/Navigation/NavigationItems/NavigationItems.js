@@ -14,7 +14,7 @@ const navigationItems = (props) => (
         <NavigationItem
             link="/"
         >
-            Check out
+            Check Out
         </NavigationItem>
     </ul>
 );
