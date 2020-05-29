@@ -96,11 +96,12 @@ class BurgerBuilder extends Component {
     purchaseContinueHandler = () => {
 
         const queryParams = [];
+
         for (let i in this.state.ingredients) {
             queryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]));
         }
 
-        queryParams.push('price=' + this.state.totalPrice);
+        queryParams.push('price=' + this.state.totalPrice.toFixed(2));
 
         const queryString = queryParams.join('&');
 
@@ -108,11 +109,10 @@ class BurgerBuilder extends Component {
             pathname: '/checkout',
             search: '?' + queryString
         });
+
     }
 
     render() {
-
-        console.log("I'm BurgerBuilder");
 
         const disableInfo = {
             ...this.state.ingredients
