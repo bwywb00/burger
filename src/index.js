@@ -9,7 +9,12 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import reducer from './store/reducer';
 
-const store = createStore(reducer);
+// https://github.com/zalmoxisus/redux-devtools-extension
+
+const store = createStore(
+    reducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 const app = (
     <Provider store={store}>
