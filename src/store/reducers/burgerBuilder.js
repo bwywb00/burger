@@ -34,6 +34,8 @@ const reducer = (state = initialState, action) => {
                 totalPrice: state.totalPrice - INGREDIENTS_PRICES[action.ingredientName]
             }
         case actionTypes.SET_INGREDIENTS:
+            // 초기의 버거 재료값을 서버로부터 가져오는 로직
+            // 이때 totalPrice도 초기화 해주자
             return {
                 ...state,
                 ingredients: {
@@ -42,6 +44,7 @@ const reducer = (state = initialState, action) => {
                     cheese: action.ingredients.cheese,
                     meat: action.ingredients.meat
                 },
+                totalPrice: 4,
                 error: false
             }
         case actionTypes.FETCH_INGREDIENTS_FAILED:
