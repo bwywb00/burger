@@ -1,5 +1,4 @@
 import * as actionTypes from '../actions/actionTypes';
-import { initIngredients } from '../actions';
 
 const initialState = {
     orders: [],
@@ -16,7 +15,7 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 loading: false,
-                orders: state.orders.concat[newOrder]
+                orders: state.orders.concat(newOrder)
             };
         case actionTypes.PURCHASE_BURGER_FAIL:
             return {
@@ -29,7 +28,7 @@ const reducer = (state = initialState, action) => {
                 loading: true
             };
         default:
-            break;
+            return state;
     }
 }
 

@@ -27,7 +27,8 @@ export const purchaseBurger = (orderData) => {
         dispatch(purchaseBurgerStart());
         axios.post('/orders.json', orderData)
             .then(response => {
-                dispatch(purchaseBurgerSuccess(response.data, orderData));
+                //post가 성공한 경우에 response.data에는 name값이 온다: 뭐라고 해야하지 index라고 생각해야하나
+                dispatch(purchaseBurgerSuccess(response.data.name, orderData));
             })
             .catch(error => {
                 dispatch(purchaseBurgerFail(error));
