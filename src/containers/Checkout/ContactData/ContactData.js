@@ -113,7 +113,6 @@ class ContactData extends Component {
         };
 
         this.props.onOrderBurger(order);
-
     }
 
     checkValidity(value, rules) {
@@ -157,7 +156,6 @@ class ContactData extends Component {
             orderForm: updatedOrderForm,
             formIsValid: formIsValid
         });
-
     }
 
     render() {

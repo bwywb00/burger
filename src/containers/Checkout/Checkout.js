@@ -18,8 +18,12 @@ class Checkout extends Component {
     render() {
         let summary = <Redirect to="/" />;
         if (this.props.ings) {
+            // order reducer에 존재하는 purchased state는 일단 구매가 성공적으로 이루어지면 true가 된다.
+            // 이제 이 purchased 값을 초기화 시켜주어야 하는데, 어디서 초기화를 시킬지 결정해야 한다
+            const purchasedRedirect = this.props.purchased ? <Redirect to="/" /> : null;
             summary =
                 <div>
+                    {purchasedRedirect}
                     <CheckoutSummary
                         ingredients={this.props.ings}
                         checkoutCancelled={this.checkoutCancelHandler}
@@ -40,7 +44,8 @@ class Checkout extends Component {
 
 const mapStateToProps = state => {
     return {
-        ings: state.burgerBuilder.ingredients
+        ings: state.burgerBuilder.ingredients,
+        purchased: state.order.purchased
     }
 }
 
