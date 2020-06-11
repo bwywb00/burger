@@ -1,3 +1,4 @@
-326. Adding Actions
+327. Getting a Token from the Backend
 
-로그인과 관련된 Action을 만들자
+Firebase에서 제공하는 REST API를 사용해서
+e-mail과 비밀번호를 등록하기
