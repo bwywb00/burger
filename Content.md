@@ -1,5 +1,5 @@
-328. Adding Sign-In
+329. Storing the Token
 
-버튼을 통해서 [Sign-In <-> Sign-Up] 을 가능하게 하고
-Firebase Auth Rest API를 참고해서 Sign-In 기능을 추가한다
+Sign-In을 했을 때 서버로부터 전송받는 token과 localId의 값을
+reducer에 저장하자
 
