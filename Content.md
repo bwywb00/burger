@@ -1,4 +1,5 @@
-331. Logging Users Out
+332. Accessing Protected Resources
 
-Firebase Auth API를 사용해서 로그인에 성공하면 expireIn이라는 property를 전달받는데
-이 값을 저장해서 1시간 뒤에 자동적으로 Logout이 되는 checkAuthTimeout() action creator를 만들자
+Firebase의 Realtime DB에 access 권한을 부여하고
+로그인 시 Firebase로부터 전달받은 token을 사용해서 권한이 필요한 DB에 접근하자
+auth reducer에 저장되어있는 token값을 component에서 불러서 사용하자
