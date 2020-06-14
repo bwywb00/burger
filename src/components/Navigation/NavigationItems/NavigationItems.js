@@ -16,11 +16,17 @@ const navigationItems = (props) => (
         >
             Orders
         </NavigationItem>
-        <NavigationItem
-            link="/auth"
-        >
-            Authentic
-        </NavigationItem>
+        {props.isAuthenticate ?
+            (<NavigationItem
+                link="/logout"
+            >
+                Logout
+            </NavigationItem>) : (<NavigationItem
+                link="/auth"
+            >
+                Authentic
+            </NavigationItem>)}
+
     </ul>
 );
 

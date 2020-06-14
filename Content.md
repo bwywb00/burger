@@ -1,5 +1,7 @@
-332. Accessing Protected Resources
+333. Updating the UI Depending on Auth State
 
-Firebase의 Realtime DB에 access 권한을 부여하고
-로그인 시 Firebase로부터 전달받은 token을 사용해서 권한이 필요한 DB에 접근하자
-auth reducer에 저장되어있는 token값을 component에서 불러서 사용하자
+Firebase로부터 전달받은 token값을 활용해서
+Nav bar의 Navigation Item을 바꾸자
+
+**NavigationItem이 모여있는 NavigationItems는 functional component이므로
+Layout component에서 auth reducer의 token state에 접근해서 내려주도록 하자
