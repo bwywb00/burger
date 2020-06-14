@@ -1,3 +1,5 @@
-340. **Guarding Routes**
+341. **Displaying User Specific Orders**
 
-state.auth.token의 상태에 따라서 authenticated user가 접근할 수 있는 route과 그렇지 않은 route를 구분하자
+UserId가 일치하는 데이터만 불러와서 Orders에 나타내도록 하자
+Firebase의 DB규칙을 수정해야 하고
+fetchData()에서 queryParams를 사용해서 원하는 데이터만 가지고 오도록 하자
