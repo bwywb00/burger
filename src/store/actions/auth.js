@@ -29,6 +29,7 @@ export const logout = () => {
     }
 }
 
+// Logout 했을 때 setTimeout()도 cancel 시켜줘야 하는거 아냐?
 export const checkAuthTimeout = (expirationTime) => {
     return dispatch => {
         setTimeout(() => {
