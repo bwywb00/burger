@@ -1,10 +1,7 @@
-336. **Redirecting the User to the Checkout Page**
+337~338. **Persistent Auth State with localStorage**
 
-Ingredients의 변경을 Logging 하기 위해서 burgerBuilder.state.buliding state를 추가하자
+localStorage Obj를 사용해서 새로고침해도 데이터가 남아있게 하자
 
-로그인을 하지 않고 Ingredients를 추가하면
-Sing up to Order버튼이 나타난다
-이때 '/auth'로 이동해 로그인을 한다면 곧바로 Checkout 페이지로 이동하게 하자
+actions/auth.js
 
-auth reducer :          authRedirectPath
-burgerBuilder reducer : building
+authCheckState() action Creator를 통해서 localStorage에 존재하는 데이터를 가지고온다
