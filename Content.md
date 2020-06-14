@@ -1,7 +1,3 @@
-337~338. **Persistent Auth State with localStorage**
+340. **Guarding Routes**
 
-localStorage Obj를 사용해서 새로고침해도 데이터가 남아있게 하자
-
-actions/auth.js
-
-authCheckState() action Creator를 통해서 localStorage에 존재하는 데이터를 가지고온다
+state.auth.token의 상태에 따라서 authenticated user가 접근할 수 있는 route과 그렇지 않은 route를 구분하자
