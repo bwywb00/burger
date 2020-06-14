@@ -1,4 +1,5 @@
 344~350. **Improving Burger Builder**
-347. Sharing the Validation Method
+348. Using Environment Variables
 
-중복해서 사용되고 있는 checkValidity()를 utility.js에 넣고 불러서 사용하자
+chrome redux extension을 development에서만 작동할 수 있게 설정해준다
+process.env.NODE_ENV === 'development'
